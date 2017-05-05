@@ -24,7 +24,20 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7b034', end
   </head>
 
   <body>
+    <script>
+      var playing = false;
+      function play() {
+        var audio = document.getElementById("audio");
+        if (playing) {
+          audio.pause();
+        } else {
+          audio.play();
+        }
+        playing = !playing;
+      }
+    </script>
     <h1>Nikhil Venkatesa</h1>
+    <h4><button onclick="play()">If you don't hear beautiful music, click here!</button></h4>
     <a href=tweets.html>twts</a>
     <a href=videos.html>My portfolio</a>
 
@@ -76,7 +89,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7b034', end
     <img src=images/46.jpg>
     <img src=images/47.jpg>
     <img src=images/48.jpg>
-    <audio autoplay>
+    <audio id="audio" autoplay>
         <source src="devd.mp3" type="audio/mpeg">
     </audio>
   </body>
